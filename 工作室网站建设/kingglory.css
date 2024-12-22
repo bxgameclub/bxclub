@@ -1,0 +1,137 @@
+/* kingglory.css */
+
+/* 基本页面样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4D9B4; /* 淡米色背景 */
+    color: #4A3C31; /* 深棕色文字 */
+}
+
+/* 标题样式 */
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #4A3C31;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* 价格区块样式 */
+.price-section {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    background-color: #F1D1A1; /* 改为摩卡色，避免白色 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 价格分类（排位赛、英雄战力、巅峰赛） */
+.price-category {
+    background-color: #FFF0D2; /* 淡米色背景，避免白色 */
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 2px solid #C97C3A; /* 调整边框颜色为温暖的色调，统一为英雄战力色 */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.price-category h3 {
+    font-size: 2rem;
+    color: #4A3C31;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 价格列表 */
+.price-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.price-list li {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.price-list li:last-child {
+    border-bottom: none;
+}
+
+/* 价格表分隔线 */
+.price-category:nth-child(odd) {
+    background-color: #F4D9B4;
+}
+
+.price-category:nth-child(even) {
+    background-color: #F4D9B4;
+}
+
+/* 下单按钮 */
+.order-now-btn {
+    background-color: #FF8C42;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.order-now-btn:hover {
+    background-color: #D67630;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #4A3C31; /* 深棕色 */
+    overflow: hidden;
+    width: 100%;
+    text-align: center; /* 将导航栏内容居中 */
+    margin-bottom: 30px; /* 为了让导航栏和内容间有点间距 */
+}
+
+.navbar a {
+    display: inline-block;
+    color: #fff;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    background-color: #FF8C42; /* 高亮颜色 */
+    color: white;
+}
+
+/* 保留首页的头部样式 */
+header {
+    background-color: #4A3C31; /* 深棕色 */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative; /* 使 logo 定位相对于 header */
+}
+
+header img {
+    max-height: 80px;
+    position: absolute; /* 将 logo 定位到右上角 */
+    right: 20px; /* 距离右边20px */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%); /* 垂直居中调整 */
+}
+
+footer {
+    background-color: #4A3C31;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+}

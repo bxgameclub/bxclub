@@ -1,0 +1,173 @@
+/* style_order.css */
+
+/* 基本页面样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4D9B4; /* 摩卡慕斯色 */
+    color: #4A3C31; /* 深棕色文字 */
+}
+
+/* 网站头部 */
+header {
+    background-color: #4A3C31; /* 深棕色 */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header img.logo {
+    max-height: 80px;
+    position: absolute; /* 将 logo 定位到右上角 */
+    right: 20px; /* 距离右边20px */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%); /* 垂直居中调整 */
+}
+
+/* 导航栏 */
+nav {
+    background-color: #4A3C31;
+    overflow: hidden;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    background-color: #856A4D; /* 浅棕色 */
+}
+
+/* 订单表单 */
+.order-form {
+    width: 60%;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-form h2 {
+    text-align: center;
+    color: #4A3C31;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+select, textarea, input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #4A3C31;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #856A4D;
+}
+
+/* 服务声明和复选框区域 */
+#agreement-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#agreement-section label {
+    font-size: 16px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label input {
+    margin-right: 10px;
+}
+
+button.btn:disabled {
+    background-color: #ccc; /* 禁用按钮样式 */
+}
+
+/* 页脚 */
+footer {
+    background-color: #4A3C31;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 提示框样式 */
+.alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff6347;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.alert-box button {
+    background-color: white;
+    color: #ff6347;
+    font-size: 1em;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.alert-box button:hover {
+    background-color: #ff6347;
+    color: white;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和平精英 - 订单页面</title>
+    <link rel="stylesheet" href="style_order.css">
+</head>
+<body>
+
+    <!-- 网站头部 -->
+    <header>
+        <div class="header-container">
+            <h1>和平精英 - 订单页面</h1>
+            <p>选择您想要的服务，我们会尽快处理您的订单。</p>
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">主页</a></li>
+            <li><a href="kingglory_order.html">王者荣耀</a></li>
+            <li><a href="genshin_order.html">原神</a></li>
+            <li><a href="pubg_order.html">和平精英</a></li>
+            <li><a href="goldchess_order.html">金铲铲之战</a></li>
+            <li><a href="codmobile_order.html">使命召唤</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <!-- 订单表单 -->
+    <main>
+        <section class="order-form">
+            <h2>填写您的订单信息</h2>
+
+            <!-- 游戏代打服务声明链接与勾选框，放在同一行 -->
+            <div class="form-group" id="agreement-section">
+                <label>
+                    <a href="Instrument Declaration\order_declaration.html" target="_blank">点击阅读《游戏代打服务声明》</a>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    我已阅读并同意 <strong>条款与条件</strong>
+                </label>
+            </div>
+
+            <form id="order-form" action="submit_order.php" method="POST">
+                <div class="form-group">
+                    <label for="game">选择游戏</label>
+                    <select id="game" name="game" required>
+                        <option value="kingglory">和平精英</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">选择游戏区服</label>
+                    <select id="service" name="service" required>
+                        <option value="rank">苹果微信区</option>
+                        <option value="activity">苹果Q区</option>
+                        <option value="character">安卓微信区</option>
+                        <option value="boost">安卓Q区</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">选择服务类型</label>
+                    <select id="service" name="service" required>
+                        <option value="rank">排位上分</option>
+                        <option value="activity">晋级赛</option>
+                        <option value="character">战神拿框</option>
+                        <option value="boost">地铁逃生</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">具体需求</label>
+                    <textarea id="details" name="details" rows="4" placeholder="描述您的具体需求（例如：排位大师至宗师等）" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">联系方式</label>
+                    <input type="text" id="contact" name="contact" placeholder="请输入您的微信或QQ号等联系方式" required>
+                </div>
+
+                <!-- 提交订单按钮 -->
+                <button type="submit" class="btn" id="submit-btn">提交订单</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 联系方式 -->
+    <footer id="contact">
+        <h2>联系我们</h2>
+        <p>邮箱：<a href="mailto:bxgameclub@gmail.com">bxgameclub@gmail.com</a></p>
+        <p>微信：<strong>baixuan0720</strong></p>
+        <p>电话：<strong>15814289127</strong></p>
+        <p>&copy; 2024 寄白游戏工作室 - 版权所有</p>
+    </footer>
+
+    <!-- 提示框样式 -->
+    <div id="alert-box" class="alert-box" style="display: none;">
+        <p>请勾选并同意游戏代打服务声明才能提交订单。</p>
+        <button onclick="closeAlert()">关闭</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const checkbox = document.getElementById("agreement");
+        const submitBtn = document.getElementById("submit-btn");
+        const form = document.getElementById("order-form");
+        const alertBox = document.getElementById("alert-box");
+
+        // 当勾选框状态改变时，启用或禁用提交按钮
+        checkbox.addEventListener('change', function() {
+            submitBtn.disabled = !checkbox.checked;
+        });
+
+        // 提交表单时检查是否勾选复选框
+        form.addEventListener('submit', function(event) {
+            if (!checkbox.checked) {
+                event.preventDefault();  // 阻止表单提交
+                showAlert();  // 显示警告框
+            }
+        });
+
+        // 显示警告框
+        function showAlert() {
+            alertBox.style.display = 'block';
+        }
+
+        // 关闭警告框
+        function closeAlert() {
+            alertBox.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

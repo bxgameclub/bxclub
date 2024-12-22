@@ -1,0 +1,188 @@
+/* 基本布局 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #C49A6C; /* 摩卡慕斯色背景 */
+    color: #4A3C31; /* 深棕色文字 */
+}
+
+/* 头部样式 */
+header {
+    background: #C49A6C; /* 摩卡慕斯色 */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.header-container .header-info {
+    text-align: left;
+    margin-right: 20px;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.header-container .header-info p {
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logo img {
+    width: 200px; /* 固定Logo大小为200px */
+    height: auto;
+}
+
+/* 导航栏 */
+nav {
+    background: #A77B4F; /* 深棕色 */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #9E7B4F; /* 更深的棕色 */
+    border-radius: 5px;
+}
+
+nav ul li .order-btn {
+    background-color: #FF8C42; /* 橙色 */
+    border-radius: 5px;
+}
+
+/* 服务概览 */
+.services-overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.service-card {
+    background: #F4D9B4; /* 淡米色 */
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.service-card h3 {
+    margin: 10px 0;
+    color: #4A3C31;
+}
+
+.service-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #FF8C42; /* 橙色按钮 */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.service-card .btn:hover {
+    background: #E7802C;
+}
+
+/* 下单按钮部分 */
+.order-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #F4D9B4; /* 淡米色 */
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #4A3C31;
+}
+
+.order-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.order-now-btn {
+    background-color: #FF8C42;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+/* 联系方式 */
+footer {
+    background-color: #4A3C31; /* 深棕色 */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+footer a {
+    color: #FF8C42;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
